@@ -14,6 +14,6 @@
    "name": "Aria Port",
    "offline_enabled": true,
    "permissions": [ "cookies", "webRequest", "webRequestBlocking", "*://*/*", "downloads", "nativeMessaging", "contextMenus", "activeTab" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
+   "update_url": "https://github.com/salemebo/Aria-Port-Chrome-Extension/raw/master/updates.xml",
    "version": "0.1"
 }
