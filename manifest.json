@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "download.js" ]
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Aria Download Manager",
+   "homepage_url": "https://github.com/salemebo/aria",
+   "icons": {
+      "128": "aria.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtqZqCMDhMVWpV6B+W2K7HTFooONtHTfkDiotvCX/SpG8a2YoeeoshlL4tjPfgkclDePJJHhEoIzfcgvcq8zz8TudSFPaDcb04iSPaCQY3KLhD+fjePSkKfQTfZ/AA5BWGyfPIib6TmJfbX3eVC476feqgkFZHtpySOnGUV6Eq0Fpxjc/xzvS1xgXR/nAn7bCZ5IxlJppaseIqX5Zgjyp1PU1wWloIH7moaT9WbUbkbp8NJvZB34WsQJ9NE+2Im3AYzbitddNopOYXTefvZ+iitunNNyfmLarcZISSuMJnOuqYfCU+kq8aCyuU9nhE8gIWgUuVjfIlculkb69eMWGoQIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "32",
+   "name": "Aria Port",
+   "offline_enabled": true,
+   "permissions": [ "cookies", "webRequest", "webRequestBlocking", "*://*/*", "downloads", "nativeMessaging", "contextMenus", "activeTab" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.1"
+}
