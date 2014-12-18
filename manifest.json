@@ -2,9 +2,8 @@
    "background": {
       "scripts": [ "download.js" ]
    },
-   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
    "description": "Aria Download Manager",
-   "homepage_url": "https://github.com/salemebo/aria",
+   "homepage_url": "https://github.com/salemebo/Aria-Port-Chrome-Extension/releases",
    "icons": {
       "128": "aria.png"
    },
@@ -14,6 +13,6 @@
    "name": "Aria Port",
    "offline_enabled": true,
    "permissions": [ "cookies", "webRequest", "webRequestBlocking", "*://*/*", "downloads", "nativeMessaging", "contextMenus", "activeTab" ],
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.1"
+   "update_url": "https://github.com/salemebo/Aria-Port-Chrome-Extension/raw/master/updates.xml",
+   "version": "0.12"
 }
