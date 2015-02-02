@@ -10,6 +10,7 @@ var items = [];
 
 function sendNativeMessage (obj){
 	console.log("Send ");
+    console.log(JSON.stringify(obj));
 	console.log(obj);
 	chrome.runtime.sendNativeMessage('org.javafx.aria',
 	  obj,
@@ -105,6 +106,7 @@ function UrlToAria(id, url, referrer,
 			}
 		);
     }else{
+    */
     
         chrome.cookies.getAll({ 'url': url },
 			function(c) {
@@ -119,7 +121,7 @@ function UrlToAria(id, url, referrer,
 		            'fileSize':fileSize,
 					'list': false,
 					'page': ((typeof page !== 'undefined') ? page : false),
-					'url': url,
+					'url': escapeForPre(url),
 					'origUrl': origUrl,
 					'cookies': cookie_string,
 					'referrer': referrer,
@@ -129,8 +131,8 @@ function UrlToAria(id, url, referrer,
 				});
 			}
 		);
-	}
-	*/
+	/*
+    }
     chrome.cookies.getAll({  },
 			function(c) {
 				cookie_string = c.map(function(cookie){
@@ -154,6 +156,7 @@ function UrlToAria(id, url, referrer,
 				});
 			}
 		);
+    */
 }
 
 
@@ -193,10 +196,12 @@ chrome.downloads.onDeterminingFilename.addListener(
 		}
 		*/
 		
+		/*
 		if(downloadItem.mime.search('image') !== -1){
 			suggest();
 			return;
 		}
+		*/
 		
 		if(downloadItem.mime.search('html') !== -1){
 			suggest();
@@ -222,7 +227,7 @@ chrome.downloads.onDeterminingFilename.addListener(
 
 		items[downloadItem.id] = downloadItem.url;
 		chrome.downloads.cancel(downloadItem.id, function () {
-			chrome.downloads.erase({ id: downloadItem.id })
+			//chrome.downloads.erase({ id: downloadItem.id })
 		});
 		
 		UrlToAria(downloadItem.id, downloadItem.url, downloadItem.referrer, 
@@ -392,7 +397,7 @@ chrome.webRequest.onHeadersReceived.addListener(
 						break;
 					}
 				}
-			if(file && _config.monitor)
+			if(file)
 			{
 				var referrer = "";
 				for(var j = 0; j < request_headers[details.requestId].length; ++j)

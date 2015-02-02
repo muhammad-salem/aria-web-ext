@@ -14,5 +14,5 @@
    "offline_enabled": true,
    "permissions": [ "cookies", "webRequest", "webRequestBlocking", "*://*/*", "downloads", "nativeMessaging", "contextMenus", "activeTab" ],
    "update_url": "https://raw.githubusercontent.com/salemebo/Aria-Port-Chrome-Extension/master/updates.xml",
-   "version": "0.24"
+   "version": "0.25"
 }
