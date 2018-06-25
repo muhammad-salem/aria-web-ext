@@ -1,4 +1,4 @@
-Aria-Port-Chrome-Extension
+Aria Chrome Extension
 ==========================
 
-Aria Download Manager Chrome Extension
+Aria Chrome Extension
